@@ -1,6 +1,6 @@
 # customsocials
 
-[mjw.li](mjw.li)
+[mjw.li](https://mjw.li)
 
 This is my linkcard
 
