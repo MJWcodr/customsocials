@@ -15,7 +15,7 @@ img {
     margin-right: auto;
     margin-top: 10%;
     height: auto;
-    max-width: 200px;
+    max-width: 150px;
 }
     .profile-name {
         text-align: center;
@@ -54,10 +54,10 @@ img {
 .social-logo {
     filter: invert();
 
-    height: 2.5em;
-    transition: color 1s;
+    height: 3.5em;
+    transition: invert 1s;
 
-    transition: all 1s;
+    transition: drop-shadow 1s;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -65,4 +65,5 @@ img {
 
 .social-logo:hover {
         filter: drop-shadow(2px 2px  blue) invert(1);
+        
 }
