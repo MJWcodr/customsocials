@@ -1,0 +1,36 @@
+{
+  "name": "customsocials",
+  "version": "1.0.0",
+  "description": "[mjw.li](https://mjw.li)",
+  "main": "index.js",
+ "scripts": {
+    "start": "nodemon index.js -e js,html",
+    "scss": "node-sass --watch scss -o css",
+    "build-css": "node-sass --include-path scss scss/stylesheet.scss public/css/stylesheet.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MJWcodr/customsocials.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MJWcodr/customsocials/issues"
+  },
+  "homepage": "https://github.com/MJWcodr/customsocials#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "livereload": "^0.9.3",
+    "node-sass": "^6.0.0",
+    "scss": "^0.2.4",
+    "serve-static": "^1.14.1",
+    "supervisor": "^0.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
