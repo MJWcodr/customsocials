@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "[mjw.li](https://mjw.li)",
   "main": "index.js",
- "scripts": {
+  "scripts": {
     "start": "nodemon index.js -e js,html",
     "scss": "node-sass --watch scss -o css",
     "build-css": "node-sass --include-path scss scss/stylesheet.scss public/css/stylesheet.css",
