@@ -4,7 +4,7 @@
   "description": "[mjw.li](https://mjw.li)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js -e js,html",
+    "start": "nodemon index.js -e js,html,css,scss",
     "scss": "node-sass --watch scss -o css",
     "build-css": "node-sass --include-path scss scss/stylesheet.scss public/css/stylesheet.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
