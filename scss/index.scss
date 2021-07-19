@@ -1,0 +1,118 @@
+@import '_layout.scss';
+@import '_colors.scss';
+@import '_old.scss';
+
+body {
+    margin: 0;
+    font-family: 'Poppins Regular', sans-serif;
+    overflow-x: hidden;
+}
+
+
+.header {
+    height: 324px;
+    background-color: $light-blue;
+    position: absolute;
+    width: 100vw;
+}
+
+.main {
+    background-color: white;
+    
+    // outer positioning
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+
+    top: 251px;
+    position: absolute;
+    
+    // Inner Positioning
+    padding-bottom: 400px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+
+    .Usericon {
+        position: absolute;
+        top: -65px;
+        width: 150px; 
+        height: auto;
+        border-radius: 1000px;
+
+    }
+    .Usertext {
+        margin-top: 10;
+
+        // text
+        text-align: center;
+
+        .mainline {
+            font-size: 1.5em;
+            font-family: 'Poppins Bold', sans-serif;
+        }
+        .subline {
+            margin-top: 0.5em;
+            font-size: 1em;
+        }
+    }
+    .ButtonContainer {
+        position: absolute;
+        top: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .Button {
+            background-color: $dark-blue;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 15px;
+            width: 70%;
+            color: #fff;
+            border-radius: 1000px;
+            
+            // font
+            font-size: 1em;
+            text-align: center;
+
+        }
+    }
+
+    .ButtonContainer:first-child {
+         margin-top: 0px !important;
+    }
+}
+
+.ButtonText {
+    position: fixed;
+    bottom: 30px;
+    font-size: 2em;
+}
+
+// responsive 
+@media screen and (min-width: $phone) {
+    .main {
+        margin-right: 10%;
+        margin-left: 10%;
+        padding-top: 120px;
+        width: 80%;
+        border-radius: 10px;
+        .Usericon {
+            width: 200px; 
+            top: -100px;
+        }
+        .ButtonContainer {
+        top: 200px;
+            .Button {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                margin-top: 20px;
+            }
+
+        }
+    }
+    
+}

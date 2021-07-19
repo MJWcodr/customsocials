@@ -4,8 +4,10 @@
   "description": "[mjw.li](https://mjw.li)",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch scss index.js",
-    "build:css": "node-sass "
+    "start": "node index.js",
+    "dev":"nodemon -e scss,html --exec npm run build",
+    "build":"npm run build:css && node index.js",
+    "build:css": "node-sass scss/index.scss public/css/index.css"
   },
   "repository": {
     "type": "git",
