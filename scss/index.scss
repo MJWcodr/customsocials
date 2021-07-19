@@ -1,48 +1,65 @@
-@import '_layout.scss';
-@import '_colors.scss';
-@import '_old.scss';
+@import '_variables.scss';
+@import 'spinner.scss';
 
 body {
     margin: 0;
     font-family: 'Poppins Regular', sans-serif;
     overflow-x: hidden;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    background-color: $light-gray;
 }
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .header {
     height: 324px;
-    background-color: $light-blue;
-    position: absolute;
     width: 100vw;
+    background-color: $light-blue;
+    
+    /* image background
+    
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 35%;
+    background-size: cover;
+    */
+    
 }
 
 .main {
     background-color: white;
     
     // outer positioning
-    margin-left: 0%;
-    margin-right: 0%;
     width: 100%;
+    margin-top: -80px;
 
-    top: 251px;
-    position: absolute;
-    
     // Inner Positioning
+    padding-top: 0px;
     padding-bottom: 400px;
-    padding-top: 100px;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    // styling
+    
 
     .Usericon {
-        position: absolute;
-        top: -65px;
+
+        $Usericon-Height : 150px;
+        margin-top: -75px ;
+        position: relative;
         width: 150px; 
         height: auto;
         border-radius: 1000px;
 
     }
     .Usertext {
-        margin-top: 10;
+        margin-top: 10px;
 
         // text
         text-align: center;
@@ -57,8 +74,7 @@ body {
         }
     }
     .ButtonContainer {
-        position: absolute;
-        top: 180px;
+        margin-top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -73,46 +89,42 @@ body {
             width: 70%;
             color: #fff;
             border-radius: 1000px;
-            
+            border: solid $dark-blue 0.15em;
+            transition: all $animation-time;
+
             // font
             font-size: 1em;
             text-align: center;
 
         }
+        .Button:hover {
+            background-color: #fff;
+            color: $dark-blue; 
+        }
     }
-
     .ButtonContainer:first-child {
          margin-top: 0px !important;
     }
 }
 
-.ButtonText {
-    position: fixed;
-    bottom: 30px;
-    font-size: 2em;
+.BottomText {
+    font-size: 0.75em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    
+    .ExtraBold {
+        font-family: 'Poppins Bold';
+    }
 }
 
 // responsive 
 @media screen and (min-width: $phone) {
     .main {
-        margin-right: 10%;
-        margin-left: 10%;
-        padding-top: 120px;
         width: 80%;
+        max-width: 800px;
         border-radius: 10px;
-        .Usericon {
-            width: 200px; 
-            top: -100px;
-        }
-        .ButtonContainer {
-        top: 200px;
-            .Button {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                margin-top: 20px;
-            }
+        --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
-        }
     }
-    
 }

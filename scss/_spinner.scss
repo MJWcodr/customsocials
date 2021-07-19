@@ -1,0 +1,9 @@
+.progress-ring {
+    .progress-ring__circle {
+        stroke-dasharray: 10 20;
+        transition: 20s stroke-dashoffset;
+        // axis compensation
+        transform: rotate(-45deg);
+        transform-origin: 50% 50%;
+    }  
+}

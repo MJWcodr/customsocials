@@ -1,129 +1,52 @@
-/*
-body {
-    background: #303030;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    letter-spacing: 2px; 
-}
-  
-  img {
-    border-radius: 1000000px; }
-  
-  section {
-    margin-top: 30px; }
-  
-  a {
-    text-decoration: none;
-    color: white; }
-  
-  .profile-picture {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
-    height: auto;
-    max-width: 150px; }
-  
-  .profile-name {
-    font-family: 'Open Sans Bold', sans-serif;
-    text-align: center;
-    font-size: 1.75rem;
-    padding-top: 15px; }
-  
-  .links {
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    margin-top: 20px;
-    padding: 20px;
-    max-width: 480px;
-    width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 40px;
-    transition: all 400ms ease-in-out;
-    background-color: #424242; }
-  
-  .links:first-child {
-    margin-top: 0px; 
-}
-  
-  .links:hover {
-    box-shadow: 0 0 20px rgba(15, 15, 15, 0.8);
-    transform: scale(1.05); }
-  
-  .bottom-text {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 20px;
-    font-weight: bold; }
-  
-  .social-logo {
-    width: auto;
-    stroke-width: 1.75;
-    stroke: #2a9d8f;
-    min-height: 90%; }
-  
-  .social-logo .in-button {
-    flex-grow: 1; }
-  
-  .socials {
-    display: flex;
-    justify-content: center;
-    margin: 15px; }
-  
-  .round-box {
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 10px;
-    border-radius: 50%;
-    top: 50%;
-    position: relative;
-    height: fit-content;
-    height: 3.5em;
-    width: 3.5em;
-    transition: all 400ms ease-in-out; }
-  
-  .round-box:hover {
-    filter: drop-shadow(0 0 10px rgba(15, 15, 15, 0.8));
-    transform: scale(1.1); }
-  
-  #loadOverlay {
-    display: none; }
-*/
+.progress-ring .progress-ring__circle {
+  stroke-dasharray: 10 20;
+  transition: 20s stroke-dashoffset;
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%; }
+
 body {
   margin: 0;
   font-family: 'Poppins Regular', sans-serif;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f4; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
 
 .header {
   height: 324px;
+  width: 100vw;
   background-color: #A5B8E8;
-  position: absolute;
-  width: 100vw; }
+  /* image background
+    
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 35%;
+    background-size: cover;
+    */ }
 
 .main {
   background-color: white;
-  margin-left: 0%;
-  margin-right: 0%;
   width: 100%;
-  top: 251px;
-  position: absolute;
+  margin-top: -80px;
+  padding-top: 0px;
   padding-bottom: 400px;
-  padding-top: 100px;
   display: flex;
-  justify-content: center; }
+  align-items: center;
+  flex-direction: column; }
   .main .Usericon {
-    position: absolute;
-    top: -65px;
+    margin-top: -75px;
+    position: relative;
     width: 150px;
     height: auto;
     border-radius: 1000px; }
   .main .Usertext {
-    margin-top: 10;
+    margin-top: 10px;
     text-align: center; }
     .main .Usertext .mainline {
       font-size: 1.5em;
@@ -132,8 +55,7 @@ body {
       margin-top: 0.5em;
       font-size: 1em; }
   .main .ButtonContainer {
-    position: absolute;
-    top: 180px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,29 +69,27 @@ body {
       width: 70%;
       color: #fff;
       border-radius: 1000px;
+      border: solid #364EA3 0.15em;
+      transition: all 300ms;
       font-size: 1em;
       text-align: center; }
+    .main .ButtonContainer .Button:hover {
+      background-color: #fff;
+      color: #364EA3; }
   .main .ButtonContainer:first-child {
     margin-top: 0px !important; }
 
-.ButtonText {
-  position: fixed;
-  bottom: 30px;
-  font-size: 2em; }
+.BottomText {
+  font-size: 0.75em;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+  .BottomText .ExtraBold {
+    font-family: 'Poppins Bold'; }
 
 @media screen and (min-width: 500px) {
   .main {
-    margin-right: 10%;
-    margin-left: 10%;
-    padding-top: 120px;
     width: 80%;
-    border-radius: 10px; }
-    .main .Usericon {
-      width: 200px;
-      top: -100px; }
-    .main .ButtonContainer {
-      top: 200px; }
-      .main .ButtonContainer .Button {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-top: 20px; } }
+    max-width: 800px;
+    border-radius: 10px;
+    --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); } }
